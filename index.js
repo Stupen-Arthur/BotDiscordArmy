@@ -11,7 +11,7 @@ const axios = require('axios')
 const express = require('express');
 const { InteractionType, InteractionResponseType, verifyKeyMiddleware } = require('discord-interactions');
 
-const arthurDate = new Date(2024, 10, 29, 0, 0, 0)
+const arthurDate = new Date('2024-10-31')
 
 const app = express();
 // app.use(bodyParser.json());
