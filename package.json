@@ -24,6 +24,6 @@
   "keywords": [],
   "author": "",
   "scripts": {
-    "build": "ArmyBot build --output public"
+    "build": "BUILD_PATH='./dist' react-scripts build"
   }
 }
