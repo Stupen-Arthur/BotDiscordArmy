@@ -35,12 +35,12 @@ app.post('/interactions', verifyKeyMiddleware(PUBLIC_KEY), async (req, res) => {
 
   if (interaction.type === InteractionType.APPLICATION_COMMAND) {
     console.log(interaction.data.name)
+	
     if(interaction.data.name == 'yo'){
       return res.send({
         type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
         data: {
-          content: `Returning back after:
-		  EdWard ${Math.floor((arthurDate - (new Date())) / (1000 * 60 * 60 * 24))}`,
+          content: `Yo ${interaction.member.user.username}!`,
         },
       });
     }
@@ -49,7 +49,8 @@ app.post('/interactions', verifyKeyMiddleware(PUBLIC_KEY), async (req, res) => {
       return res.send({
         type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
         data: {
-          content: `Yo ${interaction.member.user.username}!`,
+          content: `Returning back after:
+		  EdWard ${Math.floor((arthurDate - (new Date())) / (1000 * 60 * 60 * 24))}`,
         },
       });
     }
@@ -97,7 +98,7 @@ app.get('/register_commands', async (req,res) =>{
     },
     {
       "name": "timeToHome",
-      "description": "This command shows when guys come back from the military.",
+      "description": "This command shows when guys come back from the military",
       "options": []
     }
   ]
