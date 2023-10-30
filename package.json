@@ -8,14 +8,10 @@
   "devDependencies": {
     "@types/node": "^17.0.42",
     "@vercel/node": "^2.9.6",
-    "typescript": "^4.7.3"
+    "typescript": "^4.7.3",
+	"discord.js": "^14.13.0"
   },
   "name": "path0",
-  "description": "Simple Node.js + Vercel example that returns a \"Hello World\" response.",
-  "bugs": {
-    "url": "https://github.com/vercel/examples/issues"
-  },
-  "homepage": "https://github.com/vercel/examples#readme",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
@@ -23,7 +19,4 @@
   },
   "keywords": [],
   "author": "",
-  "scripts": {
-    "build": "BUILD_PATH='./dist' react-scripts build"
-  }
 }
