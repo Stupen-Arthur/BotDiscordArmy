@@ -13,6 +13,7 @@ const { InteractionType, InteractionResponseType, verifyKeyMiddleware } = requir
 
 const arthurDate = new Date('2024-10-31')
 const baradzinDate = new Date('2024-10-27')
+const kamaraDate = new Date('2024-10-30')
 const kirillDate = new Date('2024-11-02')
 const dzAndVitDate = new Date('2024-11-03')
 
@@ -53,9 +54,10 @@ app.post('/interactions', verifyKeyMiddleware(PUBLIC_KEY), async (req, res) => {
         type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
         data: {
           content: `Returning back after:
+		  Borodzin ${Math.floor((baradzinDate - (new Date())) / (1000 * 60 * 60 * 24))}
+		  Kamaara ${Math.floor((kamaraDate - (new Date())) / (1000 * 60 * 60 * 24))}
 		  EdWard ${Math.floor((arthurDate - (new Date())) / (1000 * 60 * 60 * 24))}
 		  Eeeee ${Math.floor((kirillDate - (new Date())) / (1000 * 60 * 60 * 24))}
-		  Borodzin ${Math.floor((baradzinDate - (new Date())) / (1000 * 60 * 60 * 24))}
 		  上昇する太陽 ${Math.floor((dzAndVitDate - (new Date())) / (1000 * 60 * 60 * 24))}
 		  𝓔𝓵 𝓜𝓲𝓷𝓲𝓼𝓽𝓻𝓮 ${Math.floor((dzAndVitDate - (new Date())) / (1000 * 60 * 60 * 24))}`,
         },
