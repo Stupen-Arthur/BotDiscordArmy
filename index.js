@@ -44,8 +44,8 @@ app.post('/interactions', verifyKeyMiddleware(PUBLIC_KEY), async (req, res) => {
       return res.send({
         type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
         data: {
-          content: `Hello ${interaction.member.user.username}, Here's your army agenda!`,
-		  files: ['./img/povestka.jpeg'],
+          content: `Hello ${interaction.member.user.username}, Here's your army agenda!
+		  You are gay`,
         },
       });
     }
