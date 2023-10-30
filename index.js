@@ -45,7 +45,7 @@ app.post('/interactions', verifyKeyMiddleware(PUBLIC_KEY), async (req, res) => {
       });
     }
 	
-	if(interaction.data.name == 'timeToHome'){
+	if(interaction.data.name == 'timetohome'){
       return res.send({
         type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
         data: {
@@ -67,7 +67,7 @@ app.get('/register_commands', async (req,res) =>{
       "options": []
     },
     {
-      "name": "timeToHome",
+      "name": "timetohome",
       "description": "this command shows when guys come back from the military",
       "options": []
     }
