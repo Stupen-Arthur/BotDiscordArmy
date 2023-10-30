@@ -45,7 +45,7 @@ app.post('/interactions', verifyKeyMiddleware(PUBLIC_KEY), async (req, res) => {
         type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
         data: {
           content: `Hello ${interaction.member.user.username}, Here's your army agenda!`,
-		  files: ['img/povestka.jpeg'],
+		  files: ['./img/povestka.jpeg'],
         },
       });
     }
