@@ -11,6 +11,7 @@ const axios = require('axios')
 const express = require('express');
 const { InteractionType, InteractionResponseType, verifyKeyMiddleware } = require('discord-interactions');
 
+const arthurDate = new Date(2024, 10, 29, 0, 0, 0)
 
 const app = express();
 // app.use(bodyParser.json());
@@ -35,6 +36,16 @@ app.post('/interactions', verifyKeyMiddleware(PUBLIC_KEY), async (req, res) => {
   if (interaction.type === InteractionType.APPLICATION_COMMAND) {
     console.log(interaction.data.name)
     if(interaction.data.name == 'yo'){
+      return res.send({
+        type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
+        data: {
+          content: `Returning back after:
+		  EdWard ${Math.floor((arthurDate - (new Date())) / (1000 * 60 * 60 * 24)}`,
+        },
+      });
+    }
+	
+	if(interaction.data.name == 'timeToHome'){
       return res.send({
         type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
         data: {
@@ -82,6 +93,11 @@ app.get('/register_commands', async (req,res) =>{
     {
       "name": "dm",
       "description": "sends user a DM",
+      "options": []
+    },
+    {
+      "name": "timeToHome",
+      "description": "This command shows when guys come back from the military.",
       "options": []
     }
   ]
