@@ -1,4 +1,4 @@
-const { token } = require('config.json');
+const config = require('config');
 const { Client, GatewayIntentBits } = require('discord.js');
 
 const client = new Client({
@@ -25,4 +25,5 @@ client.on('messageCreate', (message) => {
   }
 });
 
+const token = config.get('token');
 client.login(token);
