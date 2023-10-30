@@ -40,7 +40,7 @@ app.post('/interactions', verifyKeyMiddleware(PUBLIC_KEY), async (req, res) => {
         type: InteractionResponseType.CHANNEL_MESSAGE_WITH_SOURCE,
         data: {
           content: `Returning back after:
-		  EdWard ${Math.floor((arthurDate - (new Date())) / (1000 * 60 * 60 * 24)}`,
+		  EdWard ${Math.floor((arthurDate - (new Date())) / (1000 * 60 * 60 * 24))}`,
         },
       });
     }
